@@ -87,5 +87,9 @@ func main() {
 		log.Fatal(err)
 	}
 	consts := parsePkgConstFromSection(string(content))
-	fmt.Println(consts)
+	// Print consts
+	fmt.Println(`List of consts declared in "k8s.io/component-helpers/storage/volume":`)
+	for _, c := range consts {
+		fmt.Println(c)
+	}
 }
